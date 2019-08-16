@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4088A3C-D023-4D2A-99F7-1F87AC5916B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RestPro.BLL</RootNamespace>
+    <AssemblyName>RestPro.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\AspNetUsersBS.cs" />
+    <Compile Include="Business\CartOrderBS.cs" />
+    <Compile Include="Business\CategoriesBS.cs" />
+    <Compile Include="Business\ProductsBS.cs" />
+    <Compile Include="Business\ReservationBS.cs" />
+    <Compile Include="Business\RestaurentsBS.cs" />
+    <Compile Include="Business\Restaurent_TypeBS.cs" />
+    <Compile Include="Business\ReviewsBS.cs" />
+    <Compile Include="Business\SlideImagesBS.cs" />
+    <Compile Include="Business\TableBS.cs" />
+    <Compile Include="Business\UsersBS.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VM\AspNetUsersVM.cs" />
+    <Compile Include="VM\CartOrderVM.cs" />
+    <Compile Include="VM\CategoriesVM.cs" />
+    <Compile Include="VM\ProductsVM.cs" />
+    <Compile Include="VM\ReservationVM.cs" />
+    <Compile Include="VM\RestaurentsVM.cs" />
+    <Compile Include="VM\Restaurent_TypeVM.cs" />
+    <Compile Include="VM\ReviewsVM.cs" />
+    <Compile Include="VM\SlideImagesVM.cs" />
+    <Compile Include="VM\TableVM.cs" />
+    <Compile Include="VM\UsersVM.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RestPro.DAL\RestPro.DAL.csproj">
+      <Project>{f47e6354-54e9-43f6-99d0-feb0a4d3c21a}</Project>
+      <Name>RestPro.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
